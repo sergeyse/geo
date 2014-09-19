@@ -16,7 +16,7 @@
     <meta name="description" content="">
     <!--full screen on an apple-->
     <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="viewport" content="width=device-width">
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
@@ -26,10 +26,6 @@
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
 
-    <link rel="stylesheet" href="styles/animate.css">
-    <link rel="stylesheet" href="bower_components/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-    <link rel="stylesheet" href="bower_components/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
-    <link rel="stylesheet" href="bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff" />
     <!-- endbuild -->
 </head>
 <!--<body ng-app="ispanApp">-->
@@ -42,7 +38,7 @@
 <ispan-nav></ispan-nav>
 
 <!-- Add your site or application content here -->
-<div class=" container repeat-item" ng-view=""></div>
+<div class="container-fluid" ng-view=""></div>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 <!--<script>
@@ -73,14 +69,10 @@
 <script src="bower_components/firebase/firebase.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-resource/angular-resource.js"></script>
-<script src="bower_components/angular-cookies/angular-cookies.js"></script>
-<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script src="bower_components/firebase-simple-login/firebase-simple-login.js"></script>
 <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
-<script src="bower_components/angular-animate/angular-animate.js"></script>
-<script src="bower_components/angular-ui-utils/ui-utils.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -88,20 +80,9 @@
 
 
 <script src="scripts/app.js"></script>
-<script src="scripts/controllers/main.js"></script>
-<script src="scripts/controllers/search.js"></script>
-<script src="scripts/controllers/create.js"></script>
+
 <script src="scripts/directive/navbardir.js"></script>
-<script src="scripts/directive/integer.js"></script>
-<script src="scripts/filters/trcolorfilter.js"></script>
-<script src="scripts/controllers/fullSearchCtrl.js"></script>
-
-
-
-
-<script src="scripts/controllers/addnew.js"></script>
-<script src="scripts/controllers/landingMap.js"></script>
-<script src="scripts/controllers/googleMap.js"></script>
+<script src="scripts/controllers/googlemap.js"></script>
 <script src="scripts/controllers/geoedit.js"></script>
 <script src="scripts/controllers/geomark.js"></script>
 <script src="scripts/controllers/loginmain.js"></script>
@@ -112,7 +93,7 @@
 
 <script>function onGoogleReady() {
     angular.bootstrap(document.getElementById("app"), ['ispanApp']);
-  //  console.log("hello we have loaded an angular app in body !");
+    //  console.log("hello we have loaded an angular app in body !");
 }
 </script>
 
