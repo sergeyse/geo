@@ -16,6 +16,9 @@ angular.module('ispanApp')
            });
 
         }
+        $scope.save = function(){
+            
+        }
 
 
 

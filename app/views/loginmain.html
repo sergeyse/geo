@@ -1,9 +1,13 @@
-<p>This is the loginmain view.</p>
+
 <div class="container">
     <div class="row">
         <div class="col-md-4">
 
-
+<div ng-hide="loginfaile = false">
+    <p>
+        Sorry but you did not loged in {{ error }}
+    </p>
+</div>
           <h3>Login form</h3>
                 <form role="form">
                     <div class="form-group">

@@ -21,7 +21,9 @@ angular.module('ispanApp')
                 $location.path('/googleMap/')
 
             },function(error){
+                $scope.error = error;
                 console.log("Login Failed",error);
+                $scope.loginfaile= true;
             });
 
         }
