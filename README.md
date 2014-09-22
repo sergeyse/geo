@@ -11,4 +11,5 @@ Css is  a bootstrap,
 Distributed application gives possibility to mark geolocation and make a comment to it.
 Creation and deletion of a geo marker is  reflecting  on all users in a real time .
 
-
+Working example is here http://goo.gl/WHN9EG
+after login , please ,add a shortcut to a home screen.
