@@ -1,16 +1,17 @@
 'use strict';
 
 angular.module('ispanApp')
-    .controller('GeomarkCtrl', ['$scope', '$firebase','$location','currentUser', function ($scope, $firebase,$location,currentUser) {
-        if(!currentUser){
+    .controller('GeomarkCtrl', ['$scope', '$firebase', '$location', 'currentUser', function ($scope, $firebase, $location, currentUser) {
+        if (!currentUser) {
             $location.path('/loginmain/');
         }
 
         var latData;
         var lonData, errorMessage;
-      //  $scope.showForm = false;
+        //  $scope.showForm = false;
         $scope.defGeo = {};
-//------------------- Date vale -----------------------------------
+        $scope.defGeo.comment="";
+//------------------- Date value -----------------------------------
         var dayOfRecord;
 
         function formatDate(date) {
@@ -41,7 +42,7 @@ angular.module('ispanApp')
          dayOfRecord = formatDate(d);
          console.log(formatDate(d));*/
 
-//        ------------------- End Date vale -----------------------------------
+//        ------------------- End Date value -----------------------------------
         function failGeoData(error) {
             console.log('error code = ' + error.code);
 
@@ -50,7 +51,7 @@ angular.module('ispanApp')
                     errorMessage = "Can't get the location";
                     break;
                 case error.PERMISSION_DENIED:
-                    errorMessage = "The user doesn't want to share location";
+                    errorMessage = "Please,enabel geolocation in your  browser";
                     break;
                 case error.TIMEOUT:
                     errorMessage = "Timeout - Finding location takes too long";
@@ -60,6 +61,7 @@ angular.module('ispanApp')
                     break;
             }
             console.log(errorMessage);
+            alert (errorMessage);
 
         }
 
@@ -71,7 +73,7 @@ angular.module('ispanApp')
             console.log(successMessage);
             latData = position.coords.latitude;
             lonData = position.coords.longitude;
-            var successMessageHTML = successMessage.replace(/\n/g, '<br />');
+            //  var successMessageHTML = successMessage.replace(/\n/g, '<br />');
 
             var ref = $firebase(new Firebase("'https://incandescent-fire-7211.firebaseio.com/map/"));
 
@@ -82,11 +84,11 @@ angular.module('ispanApp')
 
             console.log($scope.defGeo);
 
-            ref.$push($scope.defGeo).then(function(){
+            ref.$push($scope.defGeo).then(function () {
 
             });
 
-           // $scope.showForm = false;
+            // $scope.showForm = false;
             $location.path('/googleMap')
         }
 

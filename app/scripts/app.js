@@ -74,7 +74,13 @@ angular.module('ispanApp', [
         var ref = new Firebase('https://incandescent-fire-7211.firebaseio.com/');
         console.log("login" + $firebaseSimpleLogin(ref));
         return $firebaseSimpleLogin(ref);
-    }]);
+    }])
+.factory('mapRef',["$firebase","geoURL",function($firebase,geoURL){
+    var mapRef = new Firebase(geoURL);
+    return $firebase(mapRef);
+        console.log("ref from factory ",$firebase(mapRef));
+}]);
+
 
 
 

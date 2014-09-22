@@ -1,10 +1,10 @@
-<p>This is the geomark view.</p>
+
 <form class="geo-form" role="form" name="form" novalidate >
 
 
     <div class="form-group">
         <label for="Comment">Enter a comment </label>
-        <input type="text" class="form-control" id="Comment" placeholder="Enter comment" name="Comment"
+        <input style="color:#4E72E4; font-weight: bold;border-color: #4E72E4"type="text" class="form-control" id="Comment" placeholder="Enter comment" name="Comment"
                ng-model="defGeo.comment"/>
         <!--  <span ng-show="form.pontun.$error.integer" class="sample-show-hide">This is not valid integer!</span>
           &lt;!&ndash;"form.pontun.$error.integer"this is corresponding to a form and input ID NOT a data model !&ndash;&gt;
@@ -16,7 +16,7 @@
     </div>
     <div class="form-group">
         <label for="rekkan">Rekkan</label>
-        <input type="number" class="form-control" id="rekkan" placeholder="Rekkan" name="rekkan"
+        <input style="color:#4E72E4; font-weight: bold;border-color: #4E72E4"type="number" class="form-control" id="rekkan" placeholder="Rekkan" name="rekkan"
                ng-model="defGeo.rekkan" max="9999" integer/>
         <span ng-show="form.rekkan.$error.integer" class="sample-show-hide">This is not valid integer!</span>
         <!--"form.pontun.$error.integer"this is corresponding to a form and input ID NOT a data model in controller!-->

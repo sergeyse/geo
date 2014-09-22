@@ -1,27 +1,34 @@
 CACHE MANIFEST
 CACHE:
-#19.09.14
+#21.09.14  
 # images
-images/spinner-trans.gif
+
 
 # views
-#views/create.html
-#views/main.html
-#views/searchres.html
-#views/fullsearchres.html
-#index.html
+views/partial/navbar.html
+views/googlemap.html
+views/geomark.html
 
-# scripts
+#  bower
+bower_components/jquery/dist/jquery.js
 bower_components/angular/angular.js
 bower_components/firebase-simple-login/firebase-simple-login.js
 bower_components/firebase/firebase.js
+bower_components/bootstrap/dist/css/bootstrap.css.map
+bower_components/bootstrap/dist/css/bootstrap.css
+bower_components/angularfire/dist/angularfire.min.js
+bower_components/bootstrap/dist/js/bootstrap.js
+bower_components/angular-route/angular-route.js
+bower_components/angular-resource/angular-resource.js
+bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff
 
-#scripts/app.js
-#scripts/controllers/search.js
-#scripts/controllers/addnew.js
-#scripts/controllers/fullSearchCtrl.js
-#scripts/controllers/main.js
-#scripts/controllers/create.js
+#scripts
+#generated .see tasks in a  gruntfile.js
+#scripts/f9f70496.scripts.js
+#scripts/1c9579a4.vendor.js
+#styles/e21dd987.main.css
+#styles/8727a602.vendor.css
+
 
 NETWORK:
 *

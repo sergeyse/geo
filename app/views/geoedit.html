@@ -1,31 +1,31 @@
-<p>This is the geoedit view.</p>
 
 <div>
-    <form role="form">
-        <div class="form-group">
-            <label class=" control-label">Time of record:</label>
+    <div >
+        <label class=" control-label" style="float: left">Time of record: &nbsp;</label>
 
-            <div>
-                <p class="form-control-static"><span><h3 style="color: #3276b1">{{ geoMarker.time }}</h3></span></p>
-            </div>
+        <div>
+            <p ><span style="color: #3276b1">{{ geoMarker.time }}</span></p>
         </div>
-        <div class="form-group">
-            <label class=" control-label">User's email :</label>
+    </div>
+    <div >
+        <label class=" control-label" style="float: left">User's email : &nbsp;</label>
 
-            <div>
-                <p class="form-control-static"><span><h3 style="color: #3276b1">{{ geoMarker.usermail }}</h3></span></p>
-            </div>
+        <div>
+            <p ><span style="color: #3276b1">{{ geoMarker.usermail }}</span></p>
         </div>
+    </div>
+    <form role="form" name="myForm">
+
 
         <div class="form-group">
-            <label for="rekkan">Rekkan</label>
-            <input type="number" class="form-control" id="rekkan" placeholder="Enter rekkan numer" name="rekkan" min="1"
+            <label for="rekkan">Rekkan numer</label>
+            <input style="color:#4E72E4; font-weight: bold;border-color: #4E72E4"type="number" class="form-control" id="rekkan" placeholder="Enter rekkan numer" name="rekkan" min="1"
                    maxlength="6" ng-model="geoMarker.rekkan"/>
 
         </div>
         <div class="form-group">
-            <label for="Comment">Nafn</label>
-            <input type="text" class="form-control" id="Comment" placeholder="Comment" name="comment" ng-model="geoMarker.comment"/>
+            <label for="Comment">Comment</label>
+            <input style="color:#4E72E4; font-weight: bold;border-color: #4E72E4"type="text" class="form-control" id="Comment" placeholder="Comment" name="comment" ng-model="geoMarker.comment"/>
 
         </div>
         <!--<div class="form-group">
@@ -43,15 +43,15 @@
                    <input type="checkbox"> Check me out
                </label>
            </div>-->
-        <button type="button" class="btn btn-primary btn-lg btn-block" ng-disabled="myForm.$invalid" ng-click="save()">
-            Skrá do not working
+        <button type="button" class="btn btn-primary btn-lg btn-block" ng-disabled="myForm.$pristine" ng-click="save()">
+           Save
         </button>
         <p></p>
-        <button type="button" class="btn btn-primary btn-lg btn-block" ng-disabled="myForm.$invalid" ng-click="delete()">
+        <button type="button" class="btn btn-danger btn-lg btn-block" ng-disabled="myForm.$invalid" ng-click="delete()">
             Delete
         </button>
         <p></p>
-        <a ng-href="#/googleMap/"> <button type="button" class="btn btn-danger btn-lg btn-block" >
+        <a ng-href="#/googleMap/"> <button type="button" class="btn btn-info btn-lg btn-block" >
             Cancel
         </button>
         </a>

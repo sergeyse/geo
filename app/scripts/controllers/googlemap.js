@@ -12,7 +12,7 @@ angular.module('ispanApp')
         var mapOptions = {
             zoom: 11,
             center: new google.maps.LatLng(64.1335, -21.8569),
-            mapTypeId: google.maps.MapTypeId.TERRAIN
+            mapTypeId: google.maps.MapTypeId.ROADMAP
         }
         //  var image = 'images/rack.png';
 
@@ -35,8 +35,8 @@ angular.module('ispanApp')
             marker.content = '<a href="#/geoedit/' + info.name() + '" ><button class="btn btn-info">Edit</button> </a>';
 
             google.maps.event.addListener(marker, 'click', function () {
-                infoWindow.setContent('<h2>' + marker.title + '</h2>' + marker.content);
-                console.log("Marker" + marker.content);
+                infoWindow.setContent('<h4><span style="color:#3276b1">' + marker.title + '</span></h4>' + marker.content);
+               // console.log("Marker" + marker.content);
                 infoWindow.open($scope.map, marker);
             });
 
@@ -124,7 +124,7 @@ angular.module('ispanApp')
             var locationsList2 = locationsFireRef.$asArray();
             locationsList2.$loaded().then(function () {
                 console.log("list has " + locationsList2.length);
-                //console.log(locationsList[1]);
+               //console.log(locationsList[1]);
                 for (var i = 0; i < locationsList2.length; i++) {
                     createMarker(locationsList2[i]);
                 }

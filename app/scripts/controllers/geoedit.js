@@ -17,6 +17,9 @@ angular.module('ispanApp')
 
         }
         $scope.save = function(){
+            $scope.geoMarker.$save().then(function(){
+                $location.path('/googleMap/');
+            })
 
         }
 

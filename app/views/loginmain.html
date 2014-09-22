@@ -1,29 +1,41 @@
-
 <div class="container">
     <div class="row">
         <div class="col-md-4">
 
-<div ng-hide="loginfaile = false">
-    <p>
-        Sorry but you did not loged in {{ error }}
-    </p>
-</div>
-          <h3>Login form</h3>
-                <form role="form">
-                    <div class="form-group">
-                        <label for="inputEmail">Email address</label>
-                        <input type="email" class="form-control" id="inputEmail" ng-model="inputEmail" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword">Password</label>
-                        <input type="password" class="form-control" id="inputPassword" ng-model="inputPassword" placeholder="Password">
-                    </div>
-                    <button type="submit" class="btn btn-primary" ng-submit="login()" ng-click="login()">Log In</button>
+            <div ng-hide="loginfaile = false">
+                    <div class="alert-danger" role="alert">
+                    <p>
+                        Please log in {{ error }}
+                    </p>
+                </div>
+            </div>
+            <p>
+            <div >
+                <div class="alert-danger" role="alert">
+                    <p ng-hide="true">
+                        Sorry but you have to be connected to internet
+                    </p>
+                </div>
+            </div>
+            </p>
+            <h3>Login form</h3>
+
+            <form role="form" name="form">
+                <div class="form-group">
+                    <label for="inputEmail">Email address</label>
+                    <input type="email" class="form-control" id="inputEmail" ng-model="inputEmail" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" class="form-control" id="inputPassword" ng-model="inputPassword"
+                           placeholder="Password" required>
+                </div>
+                <button ng-disabled="form.$invalid || isUnchanged(inputEmail)" type="submit" class="btn btn-primary" ng-submit="login()" ng-click="login()">Log In</button>
                 <!--    <button class="btn btn-default" ng-click="register()">Register</button>-->
 
-                </form>
+            </form>
 
-            <p class="alert alert-danger" ng-show="loginMessage" style="margin-top: 20px;">{{loginMessage}}</p>
+
         </div>
 
     </div>

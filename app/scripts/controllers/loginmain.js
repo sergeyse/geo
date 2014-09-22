@@ -12,6 +12,20 @@ angular.module('ispanApp')
     console.log("Login Failed",error);
 });*/
 
+//        ----------------- connection check is not working sinse we need a google map download first and then bootstrap an angular --------------
+        var connectedRef = new Firebase("https://incandescent-fire-7211.firebaseio.com/.info/connected");
+        connectedRef.on("value", function(snap) {
+            if (snap.val() === true) {
+
+                $scope.online =false;
+            } else {
+
+            }
+        });
+
+//        ----------------- END connection check is not working sinse we need a google map download first and then bootstrap an angular --------------
+
+
         $scope.login= function (){
             simpleLogin.$login('password',{
                 email:$scope.inputEmail,
