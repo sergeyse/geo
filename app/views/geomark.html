@@ -1,9 +1,11 @@
 
 <form class="geo-form" role="form" name="form" novalidate >
 
-
+    <div ng-show="spinner" >
+        <img src="/images/spinner.gif"> &nbsp;<span style="color: #2286ff" >Please wait for a map to load...</span>
+    </div>
     <div class="form-group">
-        <label for="Comment">Enter a comment </label>
+        <label for="Comment">Enter a comment: </label>
         <input style="color:#4E72E4; font-weight: bold;border-color: #4E72E4"type="text" class="form-control" id="Comment" placeholder="Enter comment" name="Comment"
                ng-model="defGeo.comment"/>
         <!--  <span ng-show="form.pontun.$error.integer" class="sample-show-hide">This is not valid integer!</span>
@@ -15,7 +17,7 @@
 
     </div>
     <div class="form-group">
-        <label for="rekkan">Rekkan</label>
+        <label for="rekkan">Rekkan:</label>
         <input style="color:#4E72E4; font-weight: bold;border-color: #4E72E4"type="number" class="form-control" id="rekkan" placeholder="Rekkan" name="rekkan"
                ng-model="defGeo.rekkan" max="9999" integer/>
         <span ng-show="form.rekkan.$error.integer" class="sample-show-hide">This is not valid integer!</span>
@@ -29,11 +31,11 @@
 
         </div>-->
 
-    <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="geoRec()">
+    <button type="button"  style="color:#4E72E4; font-weight: bold;border-color:#4E72E4" class="btn btn-default btn-lg btn-block" ng-click="geoRec()">
         Skrá
     </button>
     <p></p>
    <a ng-href="#/googleMap">
-       <button class="btn btn-danger btn-lg btn-block">Cancel</button>
+       <button style="color:#b11a38; font-weight: bold;border-color:#b11a38" class="btn btn-default btn-lg btn-block">Cancel</button>
    </a>
 </form>

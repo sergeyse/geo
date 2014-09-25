@@ -7,6 +7,7 @@ angular.module('ispanApp')
         if (!currentUser){
             $location.path('/loginmain');
         };
+        $scope.loadedMap = false;
 
 
         var mapOptions = {
@@ -18,7 +19,7 @@ angular.module('ispanApp')
 
         $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-
+        $scope.loadedMap = true;
         $scope.markers = [];
 
         var infoWindow = new google.maps.InfoWindow();

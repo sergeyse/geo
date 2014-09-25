@@ -29,10 +29,11 @@ angular.module('ispanApp')
         $scope.login= function (){
             simpleLogin.$login('password',{
                 email:$scope.inputEmail,
-                password:$scope.inputPassword
+                password:$scope.inputPassword,
+                rememberMe: true
             }).then(function(user){
                 console.log("logged in as", user.uid,user.email);
-                $location.path('/googleMap/')
+                $location.path('/geomark')
 
             },function(error){
                 $scope.error = error;

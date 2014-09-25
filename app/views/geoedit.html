@@ -18,14 +18,14 @@
 
 
         <div class="form-group">
-            <label for="rekkan">Rekkan numer</label>
+            <label for="rekkan">Rekkan numer:</label>
             <input style="color:#4E72E4; font-weight: bold;border-color: #4E72E4"type="number" class="form-control" id="rekkan" placeholder="Enter rekkan numer" name="rekkan" min="1"
                    maxlength="6" ng-model="geoMarker.rekkan"/>
 
         </div>
         <div class="form-group">
-            <label for="Comment">Comment</label>
-            <input style="color:#4E72E4; font-weight: bold;border-color: #4E72E4"type="text" class="form-control" id="Comment" placeholder="Comment" name="comment" ng-model="geoMarker.comment"/>
+            <label for="Comment">Comment:</label>
+            <input style="color:#4E72E4; font-weight: bold;border-color: #4E72E4;  "type="text" class="form-control" id="Comment" placeholder="Comment" name="comment" ng-model="geoMarker.comment"/>
 
         </div>
         <!--<div class="form-group">
@@ -43,15 +43,15 @@
                    <input type="checkbox"> Check me out
                </label>
            </div>-->
-        <button type="button" class="btn btn-primary btn-lg btn-block" ng-disabled="myForm.$pristine" ng-click="save()">
+        <button type="button" style="color:#001e7e; font-weight: bold;border-color:#001e7e"  class="btn btn-default btn-lg btn-block" ng-disabled="myForm.$pristine" ng-click="save()">
            Save
         </button>
         <p></p>
-        <button type="button" class="btn btn-danger btn-lg btn-block" ng-disabled="myForm.$invalid" ng-click="delete()">
+        <button type="button" style="color:#b11a38; font-weight: bold;border-color:#b11a38" class="btn btn-default btn-lg btn-block" ng-disabled="myForm.$invalid" ng-click="delete()">
             Delete
         </button>
         <p></p>
-        <a ng-href="#/googleMap/"> <button type="button" class="btn btn-info btn-lg btn-block" >
+        <a ng-href="#/googleMap/"> <button type="button" style="color:#e8d531; font-weight: bold;border-color:#e8d531"  class="btn btn-default btn-lg btn-block" >
             Cancel
         </button>
         </a>

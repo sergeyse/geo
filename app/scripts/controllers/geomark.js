@@ -2,6 +2,7 @@
 
 angular.module('ispanApp')
     .controller('GeomarkCtrl', ['$scope', '$firebase', '$location', 'currentUser', function ($scope, $firebase, $location, currentUser) {
+        $scope.spinner = false;
         if (!currentUser) {
             $location.path('/loginmain/');
         }
@@ -93,6 +94,7 @@ angular.module('ispanApp')
         }
 
         $scope.geoRec = function () {
+            $scope.spinner = true;
             if (navigator.geolocation) {
                 var startMessage = 'Browser supports geolocation API';
                 console.log(startMessage);

@@ -86,7 +86,7 @@ body {
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
     #map{
-        height: 320px;
+        height: 380px;
         /*width: 300px;*/
     }
 
@@ -100,6 +100,10 @@ body {
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
 
+    #map{
+        height: 700px;
+        /*width: 300px;*/
+    }
 }
 
 /* Medium Devices, Desktops */

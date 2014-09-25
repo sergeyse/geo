@@ -1,13 +1,15 @@
 CACHE MANIFEST
 CACHE:
-#21.09.14  
+#22 .09.14
 # images
 
 
 # views
+views/geoedit.html
 views/partial/navbar.html
 views/googlemap.html
 views/geomark.html
+images/spinner.gif
 
 #  bower
 bower_components/jquery/dist/jquery.js
